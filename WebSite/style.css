@@ -1,0 +1,44 @@
+﻿#mainContainer {
+    margin: 0 auto;
+    width: 950px;
+}
+
+header{
+    position:relative;
+    background-color:#333333;
+    padding:10px;
+    
+    
+}
+
+footer{
+    background-color:#333333;
+    color:white;
+    height:150px;
+    text-align:center;
+    padding:10px;
+}
+
+#Menu1{
+    display:inline-block;
+    
+}
+#ProductContainer {
+    display: inline-block;
+    width:600px;
+}
+.singleProductContainer{
+    float:left;
+    width:150px;
+    margin:10px;
+    display: inline-block;
+}
+.productName, .productPrice{
+    float:left;
+    width:100%;
+}
+.Important{
+    font-size: large;
+    color:red;
+}
+

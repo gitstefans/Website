@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="default.aspx" title="Home"  description="This is Home page.">
+    <siteMapNode url="Products.aspx" title="Products"  description="This is Products page." />
+    <siteMapNode url="About.aspx" title="About"  description="This is About page." />
+    <siteMapNode url="Contact.aspx" title="Contact" description="This is Contact page."/>
+    <siteMapNode title="Roles">
+      <siteMapNode url="~/Roles/ManageRoles.aspx" title="Manage Roles"></siteMapNode>
+      <siteMapNode url="~/Roles/UsersAndRoles.aspx" title="Users and Roles"></siteMapNode>
+      <siteMapNode url="~/Roles/RoleBasedAuthorization.aspx" title="Role-Based Authorization"></siteMapNode>
+      <siteMapNode url="~/Roles/"></siteMapNode>
+    </siteMapNode>"
+  </siteMapNode>
+</siteMap>

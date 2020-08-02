@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <link href="style.css" rel="stylesheets" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+
+        <div id="mainContainer" style="background-color: moccasin;">
+
+            <header style="background-color: cornsilk">
+                <div style="background-color: antiquewhite">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~\img\slika5.png" Style="width: 1000px; height: 120px; margin-left: 180px;" />
+                </div>
+                <div>
+                   <%-- <asp:Button ID="Logout" runat="server" Text="Logout" OnClick="Logout_Click" />--%>
+                </div>
+                <div id="divmenu" style="background-color: red; height: 50px; font-size: 18px;">
+                    <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" StaticDisplayLevels="2" Orientation="Horizontal" StaticMenuItemStyle-ForeColor="Black" StaticHoverStyle-ForeColor="Tan" StaticSelectedStyle-ForeColor="Tan"></asp:Menu>
+                </div>
+            </header>
+            <br />
+            <div id="Navigation">
+                <asp:ContentPlaceHolder ID="LoginContent" runat="server">
+                    <asp:LoginView ID="LoginView1" runat="server">
+                        <LoggedInTemplate>
+                            Welcome Back,
+                            <asp:LoginName ID="LoginName1" runat="server" />
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            Hello stranger.
+                            <asp:HyperLink ID="lnkReg2" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                    <br />
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Logout.aspx"/>
+                    <br />
+                    <br />
+                </asp:ContentPlaceHolder>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <br />
+            <br />
+            <footer style="background-color: cornsilk;">
+                <div id="div5" style="background-color: black">
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~\img\cosmetics2.png" Style="width: 975px; height: 70px; margin-left: 190px;" />
+                </div>
+                <div id="div1" style="align-content: center;">
+                    <p id="pargh1">
+                        <a href="/Default.aspx">[ Home ]</a>
+                        <a href="/About.aspx">[ About us ]</a>
+                        <a href="/Products.aspx/">[ Products ]</a>
+                        <a href="/Contact.aspx">[ Contact ]</a>
+                    </p>
+
+                    <p>
+                        Copyright 2019 <a href="#">LINK GROUP<a />. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
